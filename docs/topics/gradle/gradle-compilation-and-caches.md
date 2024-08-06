@@ -13,10 +13,15 @@ On this page, you can learn about the following topics:
 
 ## Incremental compilation
 
-The Kotlin Gradle plugin supports incremental compilation. Incremental compilation tracks changes to source files between
-builds so that only the files affected by these changes are compiled.
+The Kotlin Gradle plugin supports incremental compilation. Incremental compilation tracks changes to files in the classpath
+between builds so that only the files affected by these changes are compiled. Incremental compilation works with [Gradle's
+build cache](#gradle-build-cache-support) and supports [compilation avoidance](https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_compile_avoidance).
 
 Incremental compilation is supported for Kotlin/JVM and Kotlin/JS projects, and is enabled by default.
+
+> Kotlin/JS projects use a different incremental compilation approach based on history files. 
+>
+{type="note"}
 
 There are several ways to disable incremental compilation:
 
